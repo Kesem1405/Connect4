@@ -1,38 +1,49 @@
+@font-face {
+    font-family: myFont;
+    src: url(Rust.TTF) ;
+}
+@font-face {
+    font-family: winnerFont;
+    src:url(ARR.ttf);
+}
+.Header{
+    font-family: myFont, serif;
+    font-size: 130px;
+    color: #21b8c2;
+}
+
+body {
+    background: radial-gradient(circle, #f1f1f1, #706d6b);
+}
+.startButton{
+    background-color: darkolivegreen;
+    color: purple;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 32px;
+    display: inline-block;
+    font-size: 19px;
+}
+
+.winnerMessage{
+    font-family: winnerFont, serif;
+    font-size: 59px;
+    text-align: center;
+    text-decoration-line: none;
+}
+.body{
+    background-color: black;
+}
+
+:root {
+    --size: 100px;
+
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
