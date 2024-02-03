@@ -133,7 +133,7 @@ function App() {
 
     return (
         <div className="App">
-            <acudio ref={soundRef} src={dropSound} preload="auto"/>
+            <audio ref={soundRef} src={dropSound} preload="auto"/>
             <div id="gameMessage">{message}</div>
             <DropZone onPlayerAction={handlePlayerAction}
                       currentPlayer={currentPlayer}
