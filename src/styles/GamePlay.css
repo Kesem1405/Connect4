@@ -1,0 +1,57 @@
+@font-face {
+    font-family: winnerFont;
+    src: url(../fonts/ARR.ttf);
+}
+
+
+
+.player-status {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.player-status.player1 {
+    left: -200px;
+}
+
+.player-status.player2 {
+    right: -200px;
+}
+
+.player-status-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+    animation: fall 0.5s ease-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.player-turn {
+    font-weight: normal;
+    color: #666;
+}
+
+.player-turn-active {
+    font-weight: bold;
+    font-size:22px;
+    color: #000;
+}
+
+.winnerMessage {
+    font-family: winnerFont, serif;
+    font-size: 59px;
+    text-align: center;
+    text-decoration-line: none;
+}
+
+
+@media (min-width: 768px) {
+    .backToStartButton {
+        font-size: 24px;
+        min-width: 196px;
+    }
+}

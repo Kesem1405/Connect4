@@ -1,0 +1,31 @@
+
+
+
+body {
+    background: radial-gradient(circle, #f1f1f1, #808080);
+}
+
+
+
+:root {
+    --size: 100px;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 20px 0;
+}
+
+

@@ -1,0 +1,37 @@
+.DropZoneArea {
+    display: grid;
+    grid-template-columns: repeat(7, 99px);
+    gap: 1px;
+    height: 100px;
+    background-color: transparent;
+    opacity: 1;
+}
+.DropZoneArea div {
+    background-color: rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.DropZoneArea div:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.coinPreview {
+    margin-top: 8px;
+    margin-left: 1px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.columnIndicator {
+    flex: 1;
+    position: relative;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}

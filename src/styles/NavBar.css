@@ -1,0 +1,68 @@
+.navbar {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 5px 0;
+    visibility: visible;
+    cursor: auto;
+}
+
+.nav-item {
+    margin: 0 15px;
+    padding: 5px 15px;
+    color: #0e0e0e;
+    background-color: transparent;
+    border: black;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.nav-item {
+    appearance: none;
+    border: none;
+    font-size: inherit;
+    border-radius: 2em;
+    background: linear-gradient(to bottom, rgba(75, 75, 75, 0.33), rgba(175, 219, 255, 0.38));
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+}
+.nav-item:hover {
+    transform: scale(1.1);
+}
+
+.nav-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+    transition: transform 0.5s ease;
+}
+
+.nav-item:hover .nav-icon {
+    transform: rotate(360deg);
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.nav-item:hover .spinner, .nav-item:focus .spinner {
+    display: inline-block;
+}
+

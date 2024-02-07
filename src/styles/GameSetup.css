@@ -1,0 +1,192 @@
+@font-face {
+    font-family: myFont;
+    src: url(../fonts/Rust.TTF) ;
+}
+
+@font-face {
+    font-family: selectionFont;
+    src: url(../fonts/varsity_regular.ttf);
+}
+
+
+.GameSetup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.Header {
+    font-family: myFont, serif;
+    font-size: 130px;
+    color: #8d3600;
+}
+.gameModeButton {
+    padding: 5px;
+    margin-right: 8px;
+}
+
+.startButton {
+    margin-top: 20px;
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.startButton:hover {
+    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.colorSelectionButton{
+     font-family: selectionFont, serif;
+     color: #000000;
+     padding: 10px 15px;
+     transform: scale(1.02);
+     font-size: 18px;
+     font-weight: bold;
+     stroke: black;
+     margin: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+
+.colorSelectionButton:not(:disabled):hover {
+    transform: scale(1.2);
+}
+.colorSelectionButton:disabled {
+    transform: scale(1);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.resetColorsButton {
+    --border-radius: 24px;
+    --border-width: 8px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    appearance: none;
+    position: relative;
+    padding: 8px 16px;
+    border: 0;
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: #444444;
+    cursor: pointer;
+}
+
+.resetColorsButton::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(
+            #488cfb,
+            #29dbbc,
+            #ddf505,
+            #ff9f0e,
+            #e440bb,
+            #655adc,
+            #488cfb
+    );
+    mask-image: var(--m-i), var(--m-i);
+    mask-origin: var(--m-o);
+    mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: hue linear 500ms infinite;
+    animation-play-state: paused;
+}
+
+.resetColorsButton:hover::after {
+    animation-play-state: running;
+}
+
+@keyframes hue {
+    to {
+        filter: hue-rotate(1turn);
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.timer {
+    font-size: 1.5rem;
+}
+
+
+#gameMessage {
+    color: #007003;
+    font-size: 45px;
+    outline-style: dot-dot-dash;
+    outline-color: blanchedalmond;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+#startingGameCount {
+    font-family: myFont, serif;
+    color: #007003;
+    font-size: 79px;
+    outline-style: dot-dot-dash;
+    outline-color: blanchedalmond;
+    text-align: center;
+    animation: fadeInGameCount 2s ease;
+}
+
+.selectDifficultyButton{
+    position: relative;
+    display: inline-block;
+    margin: 5px auto;
+    border: 1px solid rgba(54, 255, 34, 0.48);
+    z-index: 10
+}
+
+.easyOption {
+     background-color: darkgreen;
+ }
+
+.hardOption {
+    background-color: orangered;
+}
+
+.easyOption:scope{
+    background-color: darkgreen;
+}
+
+@keyframes fadeInGameCount {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes timerFade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
