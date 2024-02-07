@@ -267,8 +267,7 @@ const GamePlay = ({player1Color, player2Color, isPlayingWithPC, difficulty, game
             <GameOverModal
                 isOpen={showGameOverModal}
                 onRestart={handleRematch}
-                onClose={closeModal}
-                changeColors={goToStartPage}
+                onClose={goToStartPage}
                 playTapSound={playTapSound}
             />
             {isDraw && <div>It's a draw!</div>}

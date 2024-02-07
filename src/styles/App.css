@@ -3,6 +3,8 @@
 
 body {
     background: radial-gradient(circle, #f1f1f1, #808080);
+    height: 100vh;
+
 }
 
 

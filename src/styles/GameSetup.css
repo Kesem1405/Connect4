@@ -177,10 +177,6 @@
     background-color: orangered;
 }
 
-.easyOption:scope{
-    background-color: darkgreen;
-}
-
 @keyframes fadeInGameCount {
     from { opacity: 0; }
     to { opacity: 1; }

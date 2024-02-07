@@ -10,6 +10,7 @@ function App() {
     return (
         <div className="App">
             <div>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <GameSetup
                     player1Color={player1Color}
                     setPlayer1Color={setPlayer1Color}
