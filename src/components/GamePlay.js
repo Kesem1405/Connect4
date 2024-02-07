@@ -255,7 +255,11 @@ const GamePlay = ({player1Color, player2Color, isPlayingWithPC, difficulty, game
                 <div className="player-status player2">
                     <div className="player-status-circle" style={{backgroundColor: player2Color}}></div>
                     <div className={currentPlayer === 'p2' ? "player-turn-active" : "player-turn"}>
-                        {currentPlayer === 'p2' ? "Player 2 Turn" : "Player 2"}
+                        {isPlayingWithPC === true ? (
+                            currentPlayer === 'p2' ? "PC's Turn" : "PC"
+                        ) : (
+                            currentPlayer === 'p2' ? "Player 2 Turn" : "Player 2"
+                        )}
                     </div>
                     {currentPlayer === 'p2' && !winner && <div className="timer">Time left: {timeLeft}</div>}
                 </div>
