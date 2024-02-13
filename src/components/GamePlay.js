@@ -174,8 +174,9 @@ const GamePlay = ({player1Color, player2Color, isPlayingWithPC, difficulty, game
 
     const playTapSound = () => {
         if (tapSoundRef.current) {
-            tapSoundRef.current.currentTime = 0;
-            tapSoundRef.current.play().catch(error => console.error("Error playing sound:", error));
+                tapSoundRef.current.currentTime = 0;
+                tapSoundRef.current.play().catch(error => console.error("Error playing sound:", error));
+
         }
     };
 
@@ -256,7 +257,7 @@ const GamePlay = ({player1Color, player2Color, isPlayingWithPC, difficulty, game
                     <div className="player-status-circle" style={{backgroundColor: player2Color}}></div>
                     <div className={currentPlayer === 'p2' ? "player-turn-active" : "player-turn"}>
                         {isPlayingWithPC === true ? (
-                            currentPlayer === 'p2' ? "PC's Turn" : "PC"
+                            currentPlayer === 'p2' ? "PC Turn" : "PC"
                         ) : (
                             currentPlayer === 'p2' ? "Player 2 Turn" : "Player 2"
                         )}

@@ -29,9 +29,11 @@ const RulesModal = ({ onClose }) => {
     const audioRef = useRef(null);
 
     const playSound = () => {
-        if (audioRef.current) {
-            audioRef.current.currentTime = 0;
-            audioRef.current.play();
+        if(!audioRef) {
+            if (audioRef.current) {
+                audioRef.current.currentTime = 0;
+                audioRef.current.play();
+            }
         }
     };
 
